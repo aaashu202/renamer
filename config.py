@@ -25,3 +25,9 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "TechifyBots")
 
 # Other Variables Config
 START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ada3f739fed7efdbe7b08.jpg")
+
+# config.py
+
+WEBHOOK = True  # ✅ Enable webhook mode
+WEBHOOK_URL = "https://your-app-name.render.com"  # 🌐 Your hosted bot URL (no slash at end)
+PORT = 8080  # 🔌 Default port used by Render/Heroku/Railway
