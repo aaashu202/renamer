@@ -55,12 +55,12 @@ Daily Upload limit 100GB
 Price Rs 179  ind /🌎 2.16$  per Month
 
 Payment Details :-
-<b>➜ UPI ID :</b> <code>TechifyBots@UPI</code>
+<b>➜ UPI ID :</b> <code></code>
 
-After Payment Send Screenshots Of Payment To Admin @CallOwnerBot"""
+After Payment Send Screenshots Of Payment To Admin @Dramafilez"""
     
     keybord = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/CallOwnerBot"),
+        [InlineKeyboardButton("🦋 Admin", url = "https://telegram.me/Dramafilez"),
         InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]
         ])
     
