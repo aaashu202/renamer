@@ -28,6 +28,6 @@ START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ada3f739fed7efdb
 
 # config.py
 
-WEBHOOK = True  # ✅ Enable webhook mode
+WEBHOOK = False  # ✅ Enable webhook mode
 WEBHOOK_URL = "https://mysterious-beatrix-bhankharvansh-2b1eb8fb.koyeb.app"  # 🌐 Your hosted bot URL (no slash at end)
 PORT = 8000  # 🔌 Default port used by Render/Heroku/Railway
