@@ -48,7 +48,11 @@ async def take_screen_shot(video_file, output_directory, ttl):
 
 async def add_metadata(input_path, output_path, metadata, ms):
     try:
-        await ms.edit("<i>I Found Metadata, Adding Into Your File ⚡</i>")
+        try:
+            await ms.edit("<i>I Found Metadata, Adding Into Your File ⚡</i>")
+        except Exception:
+            pass  # Ignore message edit errors
+            
         command = [
             'ffmpeg',
             '-y',
@@ -89,14 +93,21 @@ async def add_metadata(input_path, output_path, metadata, ms):
         print(t_response)
 
         if os.path.exists(output_path):
-            await ms.edit(
-                "<i>Metadata Has Been Successfully Added To Your File ✅</i>")
+            try:
+                await ms.edit("<i>Metadata Has Been Successfully Added To Your File ✅</i>")
+            except Exception:
+                pass  # Ignore message edit errors
             return output_path
         else:
-            await ms.edit("<i>Failed To Add Metadata To Your File ❌</i>")
+            try:
+                await ms.edit("<i>Failed To Add Metadata To Your File ❌</i>")
+            except Exception:
+                pass  # Ignore message edit errors
             return None
     except Exception as e:
         print(f"Error occurred while adding metadata: {str(e)}")
-        await ms.edit(
-            "<i>An Error Occurred While Adding Metadata To Your File ❌</i>")
+        try:
+            await ms.edit("<i>An Error Occurred While Adding Metadata To Your File ❌</i>")
+        except Exception:
+            pass  # Ignore message edit errors
         return None
